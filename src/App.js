@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './App.css';
 
 function App() {
   const [timer, setTimer] = useState('00:00:00')
@@ -20,8 +21,7 @@ function App() {
 
   return (
     <div className="main">
-      <h1>{timer}</h1>
-      <p>hello commit test</p>
+      <h1 className='time'>{timer}</h1>
     </div>
   );
 }
