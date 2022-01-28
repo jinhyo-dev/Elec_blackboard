@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import './App.css';
+import './styles/app.css';
+import Footer from './components/footer'
 
 function App() {
   const [timer, setTimer] = useState('00:00:00')
@@ -10,7 +11,7 @@ function App() {
     const day = tmp_day.substring(0,3)
     const hours = String(date.getHours()).padStart(2, '0')
     const minutes = String(date.getMinutes()).padStart(2, '0')
-    setTimer (`(${day}) ${hours}:${minutes}`)
+    setTimer (`${hours}:${minutes} (${day})`)
   }
 
   const startTimer = () => {
@@ -22,6 +23,7 @@ function App() {
   return (
     <div className="main">
       <h1 className='time'>{timer}</h1>
+      <Footer />
     </div>
   );
 }

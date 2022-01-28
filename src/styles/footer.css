@@ -1,0 +1,18 @@
+.btn-changeColor {
+  font-size: 14px;
+  width: 7.5rem;
+  height: 2.5rem;
+  border-radius: 1rem;
+  float: right;
+  margin-right: 2rem;
+  
+}
+
+.footer {
+  border: 1px solid #ccc;
+  width: 100%;
+  position : fixed;
+  bottom : 0;
+  background-color: #ccc;
+  text-align: center;
+}
