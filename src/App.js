@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './styles/app.css';
 import Footer from './components/footer'
+import DarkMode from './components/DarkMode'
 
 function App() {
   const [timer, setTimer] = useState('00:00:00')
@@ -22,6 +23,7 @@ function App() {
 
   return (
     <div className="main">
+      <DarkMode />
       <h1 className='time'>{timer}</h1>
       <Footer />
     </div>
