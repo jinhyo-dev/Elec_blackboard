@@ -40,3 +40,13 @@
   -ms-transform: translateX(26px);
   transform: translateX(26px); 
 }
+.switch-button {
+  margin-top: 3rem;
+  float: right;
+  margin-right: -5rem;
+}
+.setMode {
+  font-size: 1.4rem;
+  float: right;
+  margin-right: 3rem;
+}
