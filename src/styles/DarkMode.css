@@ -33,7 +33,7 @@
 } 
 .switch-button input:checked + .onoff-switch { 
   background-color: #F2D522; 
-  box-shadow: inset 1px 5px 1px #E3AE56;
+  box-shadow: inset 1px 5px 1px #F2D522;
  }
 .switch-button input:checked + .onoff-switch:before {
   -webkit-transform: translateX(26px);

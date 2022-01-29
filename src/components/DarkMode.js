@@ -5,13 +5,16 @@ export default function DarkMode() {
 
   const darkmode = () => {
     const checkbox = document.querySelector('.check');
-    const main = document.querySelect('.aaa')
+    const body = document.body
+    const time = document.querySelector('.time');
 
     checkbox.addEventListener('click', e => {
       if (e.target.checked) {
-        main.style.color = 'yellow'
+        body.style.backgroundColor = 'black'
+        time.style.color = 'white'
       } else {
-        main.style.color = 'blue'
+        body.style.backgroundColor = 'white'
+        time.style.color = 'black'
       }
     });
 
@@ -23,7 +26,6 @@ export default function DarkMode() {
         <input className='check' type="checkbox" onClick={darkmode}/>
         <span class="onoff-switch"></span>
       </label>
-      <div className="aaa">색상변경</div>
     </div>
   )
 }
