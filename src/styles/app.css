@@ -1,6 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa&display=swap');
+
 .time {
+  /* display: table-cell;
+  vertical-align: middle; */
   text-align: center;
-  width: 15rem;
+  width: 30rem;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: auto; 
+  font-family: 'Changa', sans-serif;
+  font-size: 4rem;
+  text-shadow:1px 1px 1px #ccc;
 }
