@@ -15,6 +15,7 @@ export default function DarkMode() {
         time.style.color = 'white'
         setMode.innerHTML = 'Black Mode'
         setMode.style.color = 'white'
+        body.style.transition = 'width 1s, height 1s, background-color 1s, transform 1s'
       } else {
         body.style.backgroundColor = 'white'
         time.style.color = 'black'
