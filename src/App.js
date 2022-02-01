@@ -2,8 +2,11 @@ import React, { useState } from 'react';
 import './styles/app.css';
 import Footer from './components/footer'
 import DarkMode from './components/DarkMode'
-import Navbar from './components/Navbar'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+// import Navbar from './components/Navbar'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Food from './pages/Food'
+import Notice from './pages/Notice'
 
 function App() {
   const [timer, setTimer] = useState('00:00:00')
@@ -25,13 +28,15 @@ function App() {
 
   return (
     <div className="main">
-      <Router>
+      {/* <Router>
         <Navbar />
-        <Switch>
-          <Route path="/" />
-        </Switch>
-      </Router>
-
+        <Routes>
+          <Route path='/' exact component={Home} />
+          <Route path='/Food' component={Food} />
+          <Route path='/Notice' component={Notice} />
+        </Routes>
+      </Router> */}
+      
       <DarkMode />
       <h1 className='time'>{timer}</h1>
       <Footer />
