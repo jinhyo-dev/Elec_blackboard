@@ -4,7 +4,7 @@ import '../styles/footer.css';
 export default function footer() {
   return (
     <div className="footer">
-      <p>© 2022. GBSWHS.</p>
+      <p>© 2022 - GBSW High School</p>
     </div>
   )
 

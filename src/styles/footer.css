@@ -9,10 +9,13 @@
 }
 
 .footer {
-  border: 1px solid #ccc;
+  height: 40px;
   width: 100%;
   position : fixed;
   bottom : 0;
   background-color: #ccc;
   text-align: center;
+}
+p {
+  margin: 10px;
 }
