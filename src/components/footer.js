@@ -1,4 +1,4 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 import '../styles/footer.css';
 
 export default function footer() {

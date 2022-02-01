@@ -1,8 +1,9 @@
 import React from 'react';
+import '../styles/pages.css';
 
 export default function notice() {
   return (
-  <div>
+  <div className='middle-page'>
     notice
   </div>
   )

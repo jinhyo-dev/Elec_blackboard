@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap');
+.time {
+  text-align: center;
+  width: 30rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Dosis', sans-serif;
+  font-size: 4.5rem;
+  text-shadow:1px 1px 1px #ccc;
+}
