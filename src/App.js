@@ -8,7 +8,6 @@ import Home from './pages/Home';
 function App() {
   return (
     <div className="main">
-
       <DarkMode />
         <Routes>
           <Route path="/" element={<Home/>} />
