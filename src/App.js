@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import './styles/app.css';
 import Footer from './components/footer'
 import DarkMode from './components/DarkMode'
+import Navbar from './components/Navbar'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
   const [timer, setTimer] = useState('00:00:00')
@@ -23,6 +25,13 @@ function App() {
 
   return (
     <div className="main">
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route path="/" />
+        </Switch>
+      </Router>
+
       <DarkMode />
       <h1 className='time'>{timer}</h1>
       <Footer />
