@@ -41,11 +41,12 @@
   transform: translateX(26px); 
 }
 .switch-button {
-  margin-top: 3rem;
+  margin-top: 6rem;
   float: right;
   margin-right: -5rem;
 }
 .setMode {
+  margin-top: 3rem;
   font-size: 1.4rem;
   float: right;
   margin-right: 3rem;

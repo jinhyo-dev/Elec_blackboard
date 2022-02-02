@@ -21,11 +21,7 @@ function Home() {
   startTimer()
 
   return <div className='middle-page'>
-    <h1 className='time'>{timer}</h1>
-    <p>here is home</p>
-    <a href='/Notice'>test go notice</a>
-    <br></br>
-    <a href='/Food'> test go food</a>
+  <h1 className='time'>{timer}</h1>
   </div>;
 }
 

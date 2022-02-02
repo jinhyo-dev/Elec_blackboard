@@ -13,7 +13,7 @@ export default function DarkMode() {
       if (e.target.checked) {
         body.style.backgroundColor = 'black'
         time.style.color = 'white'
-        setMode.innerHTML = 'Black Mode'
+        setMode.innerHTML = 'Dark Mode'
         setMode.style.color = 'white'
         body.style.transition = 'width 1s, height 1s, background-color 1s, transform 1s'
       } else {

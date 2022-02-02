@@ -1,5 +1,4 @@
-// import React, { useState } from 'react';
-import './styles/app.css';
+import React, { useState } from 'react';
 import Footer from './components/footer'
 import DarkMode from './components/DarkMode'
 import { Route,Routes } from "react-router-dom";
@@ -11,7 +10,6 @@ function App() {
       <DarkMode />
         <Routes>
           <Route path="/" element={<Home/>} />
-          <Route path="/notice" element={<Notice/>} />
         </Routes>
       <Footer />
     </div>
