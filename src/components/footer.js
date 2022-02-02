@@ -2,6 +2,8 @@
 import { NavLink } from 'react-router-dom';
 import '../styles/footer.css';
 import { MdOutlineFoodBank } from 'react-icons/md'
+import { FiBell } from 'react-icons/fi'
+import { BiHome } from "react-icons/bi";
 
 
 const footer = () => {
@@ -11,20 +13,20 @@ const footer = () => {
   return(
     <div className="footer">
       <div className='icoFlax'>
-        <div  className="navbar-home">
-          <NavLink exact to="/" activeStyle={activeStyle}>Home</NavLink>
-        </div>
+          <NavLink exact to="/" activeStyle={activeStyle} className="navbar-home">
+            <BiHome size='40'/>
+          </NavLink>
 
         <NavLink exact to="/food" activeStyle={activeStyle} className="navbar-food">
-          <MdOutlineFoodBank size='24'/>
-          <lable>Food</lable>
+          <MdOutlineFoodBank size='40'/>
         </NavLink>
 
-        <div className="navbar-notice">
-          <NavLink exact to="/notice" activeStyle={activeStyle}>Notice</NavLink>          
-        </div>    
+        <NavLink exact to="/notice" activeStyle={activeStyle} className="navbar-notice">            
+          <FiBell size='40  '/>
+        </NavLink>          
+            
       </div>
-      <p className='copyRight'>©2022 - GBSW High School</p>
+        <p className='copyRight'>©2022 - GBSW High School</p>
     </div>
   )
 }

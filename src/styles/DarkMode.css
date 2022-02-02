@@ -1,6 +1,6 @@
 .switch-button { 
   position: relative;
-  display: inline-block; 
+  /* display: inline-block;  */
   width: 55px; height: 30px; 
 } 
 .switch-button input {
@@ -40,14 +40,19 @@
   -ms-transform: translateX(26px);
   transform: translateX(26px); 
 }
-.switch-button {
-  margin-top: 6rem;
-  float: right;
-  margin-right: -5rem;
-}
+
+.switch-button,
 .setMode {
-  margin-top: 3rem;
-  font-size: 1.4rem;
-  float: right;
-  margin-right: 3rem;
+  position: fixed; 
+  left: 0; 
+  right: 0; 
+  top: 0;
+  margin-left: 1.7rem;
+  margin-top: 2rem;
+  font-size: 1.3rem;
 }
+.switch-button {
+  margin-top: 4.5rem;
+  margin-left: 3rem;
+}
+

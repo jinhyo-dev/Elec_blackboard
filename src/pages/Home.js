@@ -21,8 +21,8 @@ function Home() {
   startTimer()
 
   return <div className='middle-page'>
-  <h1 className='time'>{timer}</h1>
-  </div>;
+  <h1 className='time' style ={{ color: 'white' }}>{timer}</h1>
+  </div>
 }
 
 export default Home;
