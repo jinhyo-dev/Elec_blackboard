@@ -1,3 +1,6 @@
+a:link {  text-decoration: none;}
+a:visited {  text-decoration: none;}
+a:hover { text-decoration: none;}
 .btn-changeColor {
   font-size: 14px;
   width: 7.5rem;
@@ -9,13 +12,23 @@
 }
 
 .footer {
+  display: flex;
   height: 40px;
   width: 100%;
   position : fixed;
   bottom : 0;
   background-color: #ccc;
-  text-align: center;
+  
+  
 }
-p {
+.icoFlax{
+  width: 20%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.copyRight {
+  position: absolute;
+  right: 0;
   margin: 10px;
+  margin-right: 30px;
 }
