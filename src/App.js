@@ -3,7 +3,7 @@ import Footer from './components/footer'
 import DarkMode from './components/DarkMode'
 import { Route,Routes } from "react-router-dom";
 import Home from './pages/Home';
-import Food from './pages/food';
+import Food from './pages/Food';
 import Notice from './pages/Notice';
 function App() {
   return (
