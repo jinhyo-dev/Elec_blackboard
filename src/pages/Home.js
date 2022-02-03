@@ -4,7 +4,7 @@ import '../styles/Home.css';
 import '../styles/pages.css';
 function Home() {
   const [timer, setTimer] = useState('00:00 (load)')
-
+                    
   const currentTimer = () => {
     const date = new Date()
     const tmp_day = String(date).toUpperCase()

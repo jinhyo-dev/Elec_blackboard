@@ -14,15 +14,15 @@ const footer = () => {
     <div className="footer">
       <div className='icoFlax'>
           <NavLink exact to="/" activeStyle={activeStyle} className="navbar-home">
-            <BiHome size='40'/>
+            <BiHome size='40' color='#22a7f2'/>
           </NavLink>
 
         <NavLink exact to="/food" activeStyle={activeStyle} className="navbar-food">
-          <MdOutlineFoodBank size='40'/>
+          <MdOutlineFoodBank size='40' color='#36d128'/>
         </NavLink>
 
         <NavLink exact to="/notice" activeStyle={activeStyle} className="navbar-notice">            
-          <FiBell size='40  '/>
+          <FiBell size='40' color='#eb9021'/>
         </NavLink>          
             
       </div>
