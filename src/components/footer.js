@@ -7,22 +7,29 @@ import { BiHome } from "react-icons/bi";
 
 
 const footer = () => {
+  
   const activeStyle = {
     color: 'green'
   }
+
+  // const clickEvent = () => {
+  //   const home = document.querySelector('.Home-Icon')
+    
+  // }
+
   return(
     <div className="footer">
       <div className='icoFlax'>
           <NavLink exact to="/" activeStyle={activeStyle} className="navbar-home">
-            <BiHome size='40' color='#22a7f2'/>
+            <BiHome size='40' color='#22a7f2' className='Home-Icon' />
           </NavLink>
 
         <NavLink exact to="/food" activeStyle={activeStyle} className="navbar-food">
-          <MdOutlineFoodBank size='40' color='#36d128'/>
+          <MdOutlineFoodBank size='40' color='#36d128' className='Food-Icon'/>
         </NavLink>
 
         <NavLink exact to="/notice" activeStyle={activeStyle} className="navbar-notice">            
-          <FiBell size='40' color='#eb9021'/>
+          <FiBell size='40' color='#eb9021' className='Notice-Icon'/>
         </NavLink>          
             
       </div>

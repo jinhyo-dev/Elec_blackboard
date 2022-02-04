@@ -8,9 +8,11 @@ export default function DarkMode() {
     const body = document.body
     const time = document.querySelector('.time')
     const setMode = document.querySelector('.setMode')
+    const footer = document.querySelector('.footer')
 
     checkbox.addEventListener('click', e => {
       if (e.target.checked) {
+        footer.style.backgroundColor = '#ccc'
         body.style.backgroundColor = 'white'
         time.style.color = 'black'
         setMode.innerHTML = 'Light Mode'
@@ -21,6 +23,7 @@ export default function DarkMode() {
         time.style.color = 'white'
         setMode.innerHTML = 'Dark Mode'
         setMode.style.color = 'white'
+        footer.style.backgroundColor = '#f5f5f5'
       }
     })
 
