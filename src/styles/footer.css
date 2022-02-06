@@ -43,3 +43,26 @@ a:hover { text-decoration: none;}
 /* .Home-Icon:active {
   background-color: yellow;
 } */
+
+.Home-Icon {
+  color: #22a7f2;
+}
+.Home-Icon:active {
+  color: palevioletred;
+}
+
+.Food-Icon {
+  color: #36d128
+}
+
+.Food-Icon:active {
+  color: orange;
+}
+
+.Notice-Icon {
+  color: #eb9021
+}
+
+.Notice-Icon:active {
+  color: green; 
+}
