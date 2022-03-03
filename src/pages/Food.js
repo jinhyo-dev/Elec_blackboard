@@ -16,30 +16,48 @@ export default function Food() {
   }
 
   const showMeal = () => {
-    var xhr = new XMLHttpRequest();
-    var day = "20220303";
-    var target = `https://open.neis.go.kr/hub/mealServiceDietInfo?KEY=99a1b8c7095144abae21e03b2a2f65f3&Type=json&pIndex=1&pSize=10&ATPT_OFCDC_SC_CODE=R10&SD_SCHUL_CODE=8750767&MLSV_YMD=${today}`;
-    // xhr.open("GET", target + "/MLSV_YMD=" + day);
-    xhr.send();
+  var xhr = new XMLHttpRequest();
+  var target = `https://open.neis.go.kr/hub/mealServiceDietInfo?KEY=99a1b8c7095144abae21e03b2a2f65f3&Type=json&pIndex=1&pSize=10&ATPT_OFCDC_SC_CODE=R10&SD_SCHUL_CODE=8750767&MLSV_YMD=${date.replace(delStr, '')}`;
+  xhr.open("GET", target);
+  xhr.send();
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === XMLHttpRequest.DONE) {
+      if (xhr.status == 200) {
+        console.log(date)
+        let loadedJSON = JSON.parse(xhr.responseText);
+        // console.log(loadedJSON.mealServiceDietInfo[1].row[0])
+        let breakfast = loadedJSON.mealServiceDietInfo[1].row[0].DDISH_NM
+        breakfast = breakfast.replace(/<(\/)?([a-zA-Z]*)(\s[a-zA-Z]*=[^>]*)?(\s)*(\/)?>/ig, "\n")
+        breakfast = breakfast.replace(/[0-9]/g, "")
+        breakfast = breakfast.replace(/\./g,'')
+        breakfast = breakfast.replace(/\*/g,'')
+        console.log('아침\n', breakfast)
 
-    xhr.onreadystatechange = function () {
-      if (xhr.readyState === XMLHttpRequest.DONE) {
-        if (xhr.status == 200) {
-          let loadedJSON = JSON.parse(xhr.responseText);
-          console.log(loadedJSON.mealServiceDietInfo[1].row[0].DDISH_NM)//아침
-          console.log(loadedJSON.mealServiceDietInfo[1].row[1].DDISH_NM)//점심
-          console.log(loadedJSON.mealServiceDietInfo[1].row[2].DDISH_NM)//저녁
+        let lunch = loadedJSON.mealServiceDietInfo[1].row[1].DDISH_NM
+        lunch = lunch.replace(/<(\/)?([a-zA-Z]*)(\s[a-zA-Z]*=[^>]*)?(\s)*(\/)?>/ig, "\n")
+        lunch = lunch.replace(/[0-9]/g, "")
+        lunch = lunch.replace(/\./g,'')
+        lunch = lunch.replace(/\*/g,'')
+        console.log('점심\n', lunch)
 
-        } else {
-          alert("fail to load");
-        }
+        let dinner = loadedJSON.mealServiceDietInfo[1].row[2].DDISH_NM
+        dinner = dinner.replace(/<(\/)?([a-zA-Z]*)(\s[a-zA-Z]*=[^>]*)?(\s)*(\/)?>/ig, "\n")
+        dinner = dinner.replace(/[0-9]/g, "")
+        dinner = dinner.replace(/\./g,'')
+        dinner = dinner.replace(/\*/g,'')
+        console.log('저녁\n', dinner)
+
+      } else {
+        alert("fail to load");
       }
     }
+  }
   }
   return (
     <div className='Food'>
       <input type='date' onChange={(e) => setDate(e.target.value)}></input>
-      <button onClick={() => { checkDate(), showMeal() }}>yes</button>
+      <button onClick={ checkDate }>yes</button>
+      <button onClick={ showMeal }>meal</button>
     </div>
   )
 }
