@@ -31,6 +31,7 @@ export default function Food() {
         breakfast = breakfast.replace(/[0-9]/g, "")
         breakfast = breakfast.replace(/\./g,'')
         breakfast = breakfast.replace(/\*/g,'')
+        // document.write(`<div className="breakfast">${breakfast}</div>`)
         console.log('아침\n', breakfast)
 
         let lunch = loadedJSON.mealServiceDietInfo[1].row[1].DDISH_NM
@@ -38,6 +39,7 @@ export default function Food() {
         lunch = lunch.replace(/[0-9]/g, "")
         lunch = lunch.replace(/\./g,'')
         lunch = lunch.replace(/\*/g,'')
+        // document.write(`<div className="lunch">${lunch}</div>`)
         console.log('점심\n', lunch)
 
         let dinner = loadedJSON.mealServiceDietInfo[1].row[2].DDISH_NM
@@ -45,6 +47,7 @@ export default function Food() {
         dinner = dinner.replace(/[0-9]/g, "")
         dinner = dinner.replace(/\./g,'')
         dinner = dinner.replace(/\*/g,'')
+        // document.write(`<div className="dinner">${dinner}</div>`)
         console.log('저녁\n', dinner)
 
       } else {
