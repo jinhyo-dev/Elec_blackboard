@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import '../styles/pages.css';
 import '../styles/Food.css';
 import $ from "jquery";
-
+//나 디자인 못해먹겠음 ㅋㅋ 급식정보 표시될때 replace 써서 이쁘게 보이게 해주셈
 export default function Food() {
   const [breakfast, setBreakfast] = useState("")
   const [lunch, setLunch] = useState("")
@@ -22,8 +22,8 @@ export default function Food() {
     console.log(today)
     console.log(day)
   }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(()=>{ showMeal() }, [date])
-
   const showMeal = () => {
     var xhr = new XMLHttpRequest();
     var target = `https://open.neis.go.kr/hub/mealServiceDietInfo?KEY=99a1b8c7095144abae21e03b2a2f65f3&Type=json&pIndex=1&pSize=10&ATPT_OFCDC_SC_CODE=R10&SD_SCHUL_CODE=8750767&MLSV_YMD=${date.replace(delStr, '')}`;
@@ -94,7 +94,6 @@ export default function Food() {
         <input type='date' onChange={(e) => setDate(e.target.value) > showMeal()} min="2022-03-02" max="2022-07-30" id='date'></input>
         <button onClick={ checkDate } >day chack test</button>
         <button onClick={ showMeal }>meal</button>
-        {/* <button onClick={ setDate() > showMeal() }>내일식단</button> */}
       </div>
     </div>
   )

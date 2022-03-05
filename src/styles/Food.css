@@ -13,4 +13,11 @@
 .card{
   width: 25%;
   margin: 20px;
+  background-color: rgb(128, 134, 170);
+  border-radius: 7px;
+  transition: margin 0.2s;
+}
+.card:hover{
+  margin-top: 10px;
+  margin-bottom: 30px;
 }
