@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Sunflower:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+
 .foodTable {
   margin-top: 10rem;
   text-align: center;
@@ -10,14 +13,46 @@
   width: 100%;
   height: 400px;
 }
-.card{
+.breakfast{
   width: 25%;
   margin: 20px;
-  background-color: rgb(128, 134, 170);
+  background-color: #ff9500;
   border-radius: 7px;
   transition: margin 0.2s;
 }
-.card:hover{
+
+.lunch{
+  width: 25%;
+  margin: 20px;
+  background-color: #00bf60;
+  border-radius: 7px;
+  transition: margin 0.2s;
+}
+
+.dinner{
+  width: 25%;
+  margin: 20px;
+  background-color: #5e3dff;
+  border-radius: 7px;
+  transition: margin 0.2s;
+}
+
+.lunch:hover,
+.breakfast:hover,
+.dinner:hover {
   margin-top: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
+}
+
+.menu {
+  font-weight: bold;
+  font-size: 2rem;
+  margin-top: 4rem;
+  font-family: 'Sunflower', sans-serif;
+}
+
+.foodTime {
+  margin-top: 1.5rem;
+  font-size: 2.5rem;
+  font-family: 'Black Han Sans', sans-serif;
 }
