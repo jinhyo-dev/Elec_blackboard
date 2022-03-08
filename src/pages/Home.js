@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import '../styles/clock.css';
 import '../styles/Home.css';
 import '../styles/pages.css';
+
 function Home() {
   const [timer, setTimer] = useState('00:00 (load)')
                     

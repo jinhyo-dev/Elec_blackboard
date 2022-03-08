@@ -1,22 +1,20 @@
-import React, { useState, useEffect } from 'react';
-import '../styles/pages.css';
-import '../styles/Food.css';
-//나 디자인 못해먹겠음 ㅋㅋ 급식정보 표시될때 replace 써서 이쁘게 보이게 해주셈
-// 확인
+import React, { useState, useEffect } from 'react'
+import '../styles/pages.css'
+import '../styles/Food.css'
+
 export default function Food() {
   const [breakfast, setBreakfast] = useState("")
   const [lunch, setLunch] = useState("")
   const [dinner, setDinner] = useState("")
-
+  
   let today = new Date()
   var year = today.getFullYear();
   var month = ('0' + (today.getMonth() + 1)).slice(-2);
   var day = ('0' + today.getDate()).slice(-2);
-  today = year + '-' + month + '-' + day
-  const [date, setDate] = useState(today)
-  const delStr = /[^0-9]/g
+  let barToday = year + '-' + month + '-' + day
+  const [date, setDate] = useState(barToday)
+    const delStr = /[^0-9]/g
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => { showMeal() }, [date])
   const showMeal = () => {
     var xhr = new XMLHttpRequest();
@@ -73,11 +71,11 @@ export default function Food() {
   return (
     <div className='Food'>
       <div className='foodTable'>
-        {date} 의 급식정보<br /><br />
+      <div>{date} 의 급식정보<br /><br /></div>
         <div className='cardBox'>
 
           <div className='breakfast'>
-            <div className='foodTime'>아침<br /></div>
+            <div className='foodTime_black'> 아침<br /></div>
             <div className='menu'> {breakfast} </div>
           </div>
           
@@ -92,7 +90,7 @@ export default function Food() {
           </div>
 
         </div>
-        <lable>날짜로 급식 검색 : </lable>
+        <lable id='lable'>날짜로 급식 검색 : </lable>
         <input type='date' onChange={(e) => setDate(e.target.value) > showMeal()} min="2022-03-02" max="2022-07-30" id='date'></input>
       </div>
     </div>

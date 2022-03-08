@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{ useState } from 'react';
 import '../styles/DarkMode.css';
 
 export default function DarkMode() {
@@ -9,6 +9,10 @@ export default function DarkMode() {
     const time = document.querySelector('.time')
     const setMode = document.querySelector('.setMode')
     const footer = document.querySelector('.footer')
+    const foodTime = document.querySelector('.foodTime')
+    const menu = document.querySelector('.menu')
+    const lable = document.getElementById('lable')
+    const foodDate = document.querySelector('.foodDate')
 
     checkbox.addEventListener('click', e => {
       if (e.target.checked) {

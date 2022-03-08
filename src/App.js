@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Food from './pages/Food';
 import Notice from './pages/Notice';
 function App() {
+  const [mode, setMode] = useState(false)
   return (
     <>
       <div className="main">
