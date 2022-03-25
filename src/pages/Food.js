@@ -71,7 +71,7 @@ export default function Food() {
   return (
     <div className='Food'>
       <div className='foodTable'>
-      <div>{date} 의 급식정보<br /><br /></div>
+      <div className="dateOfFood">{date}의 급식정보<br /><br /></div>
         <div className='cardBox'>
 
           <div className='breakfast'>
