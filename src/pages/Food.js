@@ -75,7 +75,7 @@ export default function Food() {
         <div className='cardBox'>
 
           <div className='breakfast'>
-            <div className='foodTime_black'> 아침<br /></div>
+            <div className='foodTime'> 아침<br /></div>
             <div className='menu'> {breakfast} </div>
           </div>
           

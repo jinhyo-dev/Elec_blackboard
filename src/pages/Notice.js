@@ -1,8 +1,11 @@
 import React from 'react';
 import '../styles/pages.css';
 import '../styles/Notice.css';
-
 export default function Notice() {
+
+  fetch("http://localhost:8080")
+  .then((response) => response.json())
+  .then((data) => console.log(data));
   return (
   <div className='middle-page'>
     <table>
